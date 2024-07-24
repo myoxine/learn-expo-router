@@ -1,7 +1,7 @@
-import { useLocalSearchParams, useRouter } from "expo-router";
-import { Button, Text, View } from "react-native";
+import { useLocalSearchParams, useRouter,Link } from "expo-router";
 import React from "react";
-
+import { ThemedText } from "@/components/ThemedText";
+import { ThemedView } from "@/components/ThemedView";
 export default function Setting() {
   const router = useRouter();
   const { deviceId, settingId } = useLocalSearchParams<{
@@ -9,11 +9,12 @@ export default function Setting() {
     settingId: string;
   }>();
   return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Button onPress={() => router.back()} title="Back" />
-
-      <Text>{`This is the page of device  ${deviceId}`}</Text>
-      <Text>{`This is the page of settings  ${settingId}`}</Text>
-    </View>
+    <ThemedView style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+      <Link href={`devices/${deviceId}/edit`}>
+        <ThemedText type="link">Back</ThemedText>
+      </Link>
+      <ThemedText>{`This is the page of device  ${deviceId}`}</ThemedText>
+      <ThemedText>{`This is the page of settings  ${settingId}`}</ThemedText>
+    </ThemedView>
   );
 }

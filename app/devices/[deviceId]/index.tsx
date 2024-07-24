@@ -1,4 +1,4 @@
-import { useLocalSearchParams, useRouter } from "expo-router";
+import { useLocalSearchParams, useRouter, Link } from "expo-router";
 import { Button } from "react-native";
 import React from "react";
 import { ThemedText } from "@/components/ThemedText";
@@ -9,7 +9,9 @@ export default function Device() {
   const { deviceId } = useLocalSearchParams<{ deviceId: string }>();
   return (
     <ThemedView style={styles.container}>
-      <Button onPress={() => router.back()} title="Back" />
+      <Link href="/devices">
+        <ThemedText type="link">Back</ThemedText>
+      </Link>
       <ThemedText>{`This is the page of device ${deviceId}`}</ThemedText>
       <Button
         onPress={() => router.push({ pathname: `/devices/${deviceId}/edit` })}
