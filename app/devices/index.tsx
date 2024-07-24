@@ -8,7 +8,9 @@ export default function Devices() {
   const router = useRouter();
   return (
     <ThemedView style={styles.container}>
-      <Button onPress={() => router.back()} title="Back" />
+      <Link href="/">
+        <ThemedText type="link">Go to Home screen!</ThemedText>
+      </Link>
       <ThemedText>This is the list of devices</ThemedText>
       <ThemedView style={styles.containerList}>
         {new Array(5).fill(0).map((_, index) => {

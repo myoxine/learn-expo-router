@@ -9,7 +9,9 @@ export default function Edit() {
   const { deviceId } = useLocalSearchParams<{ deviceId: string }>();
   return (
     <ThemedView style={styles.container}>
-      <Button onPress={() => router.back()} title="Back" />
+      <Link href={`devices/${deviceId}`}>
+        <ThemedText type="link">Back</ThemedText>
+      </Link>
       <ThemedText>{`This is the device ${deviceId} editing page `}</ThemedText>
       <ThemedView style={styles.containerList}>
         {new Array(5).fill(0).map((_, index) => {
@@ -21,7 +23,7 @@ export default function Edit() {
             >
               <Pressable>
                 <ThemedView style={styles.containerEdit}>
-                  <ThemedText>{index}</ThemedText>
+                  <ThemedText>Setting {index}</ThemedText>
                 </ThemedView>
               </Pressable>
             </Link>
