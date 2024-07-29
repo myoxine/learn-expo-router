@@ -37,6 +37,7 @@ export default function RootLayout() {
         <Stack.Screen name="Another" />
         <Stack.Screen name="devices" />
         <Stack.Screen name="+not-found" />
+        <Stack.Screen name="tabs" />
       </Stack>
     </ThemeProvider>
   );

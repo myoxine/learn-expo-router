@@ -16,6 +16,9 @@ export default function Home() {
         <Link href="/devices" style={styles.link}>
           <ThemedText type="link">Go to devices screen!</ThemedText>
         </Link>
+        <Link href="/tabs" style={styles.link}>
+          <ThemedText type="link">Go to tabs screen!</ThemedText>
+        </Link>
       </ThemedView>
     </>
   );
