@@ -13,6 +13,9 @@ export default function Home() {
         <Link href="/Another" style={styles.link}>
           <ThemedText type="link">Go to another screen!</ThemedText>
         </Link>
+        <Link href="/(another)/Another2" style={styles.link}>
+          <ThemedText type="link">Go to another screen 2!</ThemedText>
+        </Link>
         <Link href="/devices" style={styles.link}>
           <ThemedText type="link">Go to devices screen!</ThemedText>
         </Link>
