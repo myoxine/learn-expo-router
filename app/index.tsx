@@ -10,18 +10,19 @@ export default function Home() {
       <Stack.Screen options={{ title: "Home" }} />
       <ThemedView style={styles.container}>
         <ThemedText type="title">This is home screen .</ThemedText>
-        <Link href="/Another" style={styles.link}>
+        {/* <Link href="/(another)/Another" style={styles.link}>
           <ThemedText type="link">Go to another screen!</ThemedText>
         </Link>
         <Link href="/(another)/Another2" style={styles.link}>
           <ThemedText type="link">Go to another screen 2!</ThemedText>
-        </Link>
+        </Link> */}
         <Link href="/devices" style={styles.link}>
           <ThemedText type="link">Go to devices screen!</ThemedText>
         </Link>
         <Link href="/tabs" style={styles.link}>
           <ThemedText type="link">Go to tabs screen!</ThemedText>
         </Link>
+        <Link href="/modal" style={styles.link}><ThemedText type="link">Present modal</ThemedText></Link>
       </ThemedView>
     </>
   );

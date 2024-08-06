@@ -32,12 +32,18 @@ export default function RootLayout() {
 
   return (
     <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
-      <Stack initialRouteName="index">
+      <Stack initialRouteName="index" screenOptions={{ presentation: 'modal',animation: 'fade_from_bottom' }}>
         <Stack.Screen name="index" />
-        <Stack.Screen name="Another" />
+        {/* <Stack.Screen name="(another)/Another" />
+        <Stack.Screen name="(another)/Another2" /> */}
         <Stack.Screen name="devices" />
-        <Stack.Screen name="+not-found" />
         <Stack.Screen name="tabs" />
+        
+        <Stack.Screen
+          name="modal"
+          options={{ presentation: 'modal', animation: 'fade_from_bottom' }}
+        />
+        <Stack.Screen name="+not-found" />
       </Stack>
     </ThemeProvider>
   );
