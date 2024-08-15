@@ -3,7 +3,10 @@ import { Tabs } from "expo-router";
 
 export default function TabLayout() {
   return (
-    <Tabs initialRouteName="home" screenOptions={{ tabBarActiveTintColor: "blue" }}>
+    <Tabs
+      initialRouteName="home"
+      screenOptions={{ tabBarActiveTintColor: "blue" }}
+    >
       <Tabs.Screen
         name="home"
         options={{
@@ -19,6 +22,21 @@ export default function TabLayout() {
           title: "Settings",
           tabBarIcon: ({ color }) => (
             <FontAwesome size={28} name="cog" color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="[dynamic]"
+        options={{
+          href: {
+            pathname: "/tabs/[dynamic]",
+            params: {
+              dynamic: "Dynamic1",
+            },
+          },
+          title: "Dynamic 1",
+          tabBarIcon: ({ color }) => (
+            <FontAwesome size={28} name="users" color={color} />
           ),
         }}
       />

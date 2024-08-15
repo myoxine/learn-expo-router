@@ -22,6 +22,7 @@ export default function Home() {
         <Link href="/tabs" style={styles.link}>
           <ThemedText type="link">Go to tabs screen!</ThemedText>
         </Link>
+        
       </ThemedView>
     </>
   );
