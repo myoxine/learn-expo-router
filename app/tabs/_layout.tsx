@@ -49,6 +49,15 @@ export default function TabLayout() {
           ),
         }}
       />
+      <Tabs.Screen
+        name="nested"
+        options={{
+          title: "Nested",
+          tabBarIcon: ({ color }) => (
+            <FontAwesome size={28} name="recycle" color={color} />
+          ),
+        }}
+      />
     </Tabs>
   );
 }
