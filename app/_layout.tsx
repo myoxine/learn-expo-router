@@ -34,7 +34,7 @@ export default function RootLayout() {
     <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
       <Stack initialRouteName="index">
         <Stack.Screen name="index" />
-        <Stack.Screen name="devices" />
+        <Stack.Screen name="drawer" />
         <Stack.Screen name="+not-found" />
         <Stack.Screen name="tabs" />
       </Stack>

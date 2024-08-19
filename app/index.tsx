@@ -22,6 +22,9 @@ export default function Home() {
         <Link href="/tabs" style={styles.link}>
           <ThemedText type="link">Go to tabs screen!</ThemedText>
         </Link>
+        <Link href="/drawer" style={styles.link}>
+          <ThemedText type="link">Go to drawer screen!</ThemedText>
+        </Link>
         
       </ThemedView>
     </>
