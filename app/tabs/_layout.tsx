@@ -3,9 +3,12 @@ import { Tabs } from "expo-router";
 
 export default function TabLayout() {
   return (
-    <Tabs screenOptions={{ tabBarActiveTintColor: "blue" }}>
+    <Tabs
+      initialRouteName="home"
+      screenOptions={{ tabBarActiveTintColor: "blue" }}
+    >
       <Tabs.Screen
-        name="index"
+        name="home"
         options={{
           title: "Home",
           tabBarIcon: ({ color }) => (
@@ -19,6 +22,39 @@ export default function TabLayout() {
           title: "Settings",
           tabBarIcon: ({ color }) => (
             <FontAwesome size={28} name="cog" color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="[dynamic]"
+        options={{
+          href: {
+            pathname: "/tabs/[dynamic]",
+            params: {
+              dynamic: "Dynamic1",
+            },
+          },
+          title: "Dynamic 1",
+          tabBarIcon: ({ color }) => (
+            <FontAwesome size={28} name="users" color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="profile"
+        options={{
+          title: "Profile",
+          tabBarIcon: ({ color }) => (
+            <FontAwesome size={28} name="user-o" color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="nested"
+        options={{
+          title: "Nested",
+          tabBarIcon: ({ color }) => (
+            <FontAwesome size={28} name="recycle" color={color} />
           ),
         }}
       />

@@ -10,7 +10,7 @@ export default function Home() {
       <Stack.Screen options={{ title: "Home" }} />
       <ThemedView style={styles.container}>
         <ThemedText type="title">This is home screen .</ThemedText>
-        <Link href="/Another" style={styles.link}>
+        <Link href="/(another)/Another" style={styles.link}>
           <ThemedText type="link">Go to another screen!</ThemedText>
         </Link>
         <Link href="/(another)/Another2" style={styles.link}>
@@ -22,6 +22,7 @@ export default function Home() {
         <Link href="/tabs" style={styles.link}>
           <ThemedText type="link">Go to tabs screen!</ThemedText>
         </Link>
+        
       </ThemedView>
     </>
   );
