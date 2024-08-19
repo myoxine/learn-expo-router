@@ -1,6 +1,6 @@
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { Drawer } from 'expo-router/drawer';
-
+import FontAwesome from "@expo/vector-icons/FontAwesome";
 export default function Layout() {
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
@@ -10,6 +10,7 @@ export default function Layout() {
           options={{
             drawerLabel: 'Drawer 1',
             title: 'Drawer 1',
+            drawerIcon:({size,color})=>( <FontAwesome size={size}  name="music" color={color} />)
           }}
         />
         <Drawer.Screen
@@ -17,6 +18,7 @@ export default function Layout() {
           options={{
             drawerLabel: 'Drawer 2',
             title: 'Drawer 2',
+            drawerIcon:({size,color})=>( <FontAwesome size={size}  name="microphone" color={color} />)
           }}
         />
       </Drawer>
