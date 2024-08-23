@@ -25,6 +25,9 @@ export default function Home() {
         <Link href="/drawer" style={styles.link}>
           <ThemedText type="link">Go to drawer screen!</ThemedText>
         </Link>
+        <Link href="/multidrawer" style={styles.link}>
+          <ThemedText type="link">Go to multidrawer screen!</ThemedText>
+        </Link>
         
       </ThemedView>
     </>

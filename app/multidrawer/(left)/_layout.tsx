@@ -1,11 +1,19 @@
-import { GestureHandlerRootView } from "react-native-gesture-handler";
+
 import { Drawer } from "expo-router/drawer";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
-import CustomDrawerContent from "@/components/CustomDrawerContent";
-export default function Layout() {
+import CustomDrawerToggleButton from "@/components/CustomDrawerToggleButton"
+
+export default function LeftLayout() {
   return (
-    <GestureHandlerRootView style={{ flex: 1 }}>
-      <Drawer drawerContent={CustomDrawerContent}>
+      <Drawer
+        id="RightDrawer"
+        screenOptions={{
+          drawerPosition: "left",
+          headerRight:(props)=>{
+            return (<CustomDrawerToggleButton {...props} />)
+          },
+        }}
+      >
         <Drawer.Screen
           name="drawer1" // This is the name of the page and must match the url from root
           options={{
@@ -27,6 +35,6 @@ export default function Layout() {
           }}
         />
       </Drawer>
-    </GestureHandlerRootView>
+
   );
 }

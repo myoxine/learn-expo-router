@@ -35,6 +35,7 @@ export default function RootLayout() {
       <Stack initialRouteName="index">
         <Stack.Screen name="index" />
         <Stack.Screen name="drawer" />
+        <Stack.Screen name="multidrawer" />
         <Stack.Screen name="+not-found" />
         <Stack.Screen name="tabs" />
       </Stack>
